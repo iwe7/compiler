@@ -1,0 +1,37 @@
+{
+  "name": "compiler2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json",
+    "start": "yarn tsc && node dist/tools/dev.js",
+    "build": "yarn tsc && node dist/tools/prod.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "rxjs": "^6.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@types/node": "^10.10.1",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "@types/webpack": "^4.4.12",
+    "babel-loader": "^8.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "license-webpack-plugin": "^1.4.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "mocha": "^5.2.0",
+    "ts-loader": "^5.1.1",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.6.0",
+    "typescript": "^3.0.3",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.19.1"
+  }
+}

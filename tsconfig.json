@@ -1,0 +1,26 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "createElement",
+        "declaration": true,
+        "baseUrl": ".",
+        "sourceMap": true,
+        "importHelpers": true,
+        "rootDir": ".",
+        "sourceRoot": ".",
+        "outDir": "./dist",
+        "target": "esnext",
+        "module": "commonjs",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "src",
+        "tools"
+    ]
+}
