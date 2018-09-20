@@ -1,3 +1,7 @@
 import { render } from 'react-dom';
 import { createElement } from 'react';
-render(<div>hello123456 wold!!</div>, document.getElementById('app'))
+import { Circle } from './components/cricle';
+import "./index.scss";
+render(<svg>
+    <Circle cx={100} cy={100} r={100} className="circle"/>
+</svg>, document.getElementById('app'))
