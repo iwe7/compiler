@@ -5,7 +5,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 import UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 import { LicenseWebpackPlugin } from 'license-webpack-plugin';
-
+import WebpackDevServer = require('webpack-dev-server');
 const root = process.cwd();
 export interface CompilerOptions {
     entry?: any;
@@ -29,6 +29,8 @@ export function compiler(options?: CompilerOptions) {
             perChunkOutput: false,
             outputFilename: `3rdpartylicenses.txt`
         }))
+    } else {
+        plugins.push(new webpack.HotModuleReplacementPlugin())
     }
     const minimizer = [];
     if (options.mode === 'production') {
@@ -102,29 +104,35 @@ export function compiler(options?: CompilerOptions) {
     if (options.mode === 'production') {
         cfg.devtool = false;
     }
-    const compiler = webpack(cfg);
-    return compiler;
+    if (options.mode === 'development') {
+        return () => new WebpackDevServer(webpack(cfg), {
+            hot: true,
+            open: true,
+            inline: true
+        }).listen(4200)
+    } else {
+        const handler = (err: Error, stats: webpack.Stats) => {
+            if (err) {
+                console.error(err);
+            }
+            if (stats.hasErrors) {
+                console.error(`${stats.toJson().errors.join('\n')}`)
+            }
+            console.log('webpack run');
+        };
+        return () => webpack(cfg).run(handler);
+    }
 }
 
-export function cli(watch: boolean = false, isDev: boolean = true) {
-    const comp = compiler({
+export function cli(isDev: boolean = true) {
+    compiler({
         entry: {
-            main: resolve(root, "src/index.tsx")
+            main: isDev ? [
+                "webpack-dev-server/client?http://localhost:4200",
+                "webpack/hot/dev-server",
+                resolve(root, "src/index.tsx")
+            ] : resolve(root, "src/index.tsx")
         },
         mode: isDev ? "development" : "production"
-    })
-    const handler = (err: Error, stats: webpack.Stats) => {
-        if (err) {
-            console.error(err);
-        }
-        if (stats.hasErrors) {
-            console.error(`${stats.toJson().errors.join('\n\n\n\n')}`)
-        }
-        console.log('webpack run');
-    };
-    if (!watch) {
-        comp.run(handler);
-    } else {
-        comp.watch({}, handler);
-    }
+    })()
 }
