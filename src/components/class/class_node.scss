@@ -1,0 +1,47 @@
+.class-node {
+    padding: 10px;
+    display: inline-block;
+    background: #efefef;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    color: #2077b4;
+    user-select: none;
+
+    &-title {
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    &-children {
+        &-property {
+            padding-left: 10px;
+            font-size: 14px;
+            color: gray;
+
+            .public {}
+
+            .private {}
+
+            .protect {}
+
+            .static {}
+        }
+
+        &-method {
+            padding-left: 10px;
+            font-size: 14px;
+            color: #333;
+
+            .public {}
+
+            .private {}
+
+            .protect {}
+
+            .static {}
+        }
+    }
+
+
+}
