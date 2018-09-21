@@ -1,0 +1,386 @@
+{
+  "pos": 0,
+  "end": 175,
+  "flags": 0,
+  "kind": 277,
+  "text": "let item = 1;\nvar item2 = 1;\nconst item3 = 1;\n\nif (item === 1) {\n  item = 2;\n} else if (item === 2) {\n  item = 3;\n} else if (item === 4) {\n  item = 4;\n} else {\n  item = 55;\n}\n",
+  "bindDiagnostics": [],
+  "languageVersion": 6,
+  "fileName": "/Volumes/meepo/compiler2/src/test/if.ts",
+  "languageVariant": 0,
+  "isDeclarationFile": false,
+  "scriptKind": 3,
+  "pragmas": {},
+  "referencedFiles": [],
+  "typeReferenceDirectives": [],
+  "libReferenceDirectives": [],
+  "amdDependencies": [],
+  "hasNoDefaultLib": false,
+  "statements": [{
+      "pos": 0,
+      "end": 13,
+      "flags": 0,
+      "kind": 217,
+      "declarationList": {
+        "pos": 0,
+        "end": 12,
+        "flags": 1,
+        "kind": 236,
+        "declarations": [{
+          "pos": 3,
+          "end": 12,
+          "flags": 0,
+          "kind": 235,
+          "name": {
+            "pos": 3,
+            "end": 8,
+            "flags": 0,
+            "escapedText": "item"
+          },
+          "initializer": {
+            "pos": 10,
+            "end": 12,
+            "flags": 0,
+            "kind": 8,
+            "text": "1",
+            "numericLiteralFlags": 0
+          }
+        }]
+      },
+      "modifierFlagsCache": 536870912
+    },
+    {
+      "pos": 13,
+      "end": 28,
+      "flags": 0,
+      "kind": 217,
+      "declarationList": {
+        "pos": 13,
+        "end": 27,
+        "flags": 0,
+        "kind": 236,
+        "declarations": [{
+          "pos": 17,
+          "end": 27,
+          "flags": 0,
+          "kind": 235,
+          "name": {
+            "pos": 17,
+            "end": 23,
+            "flags": 0,
+            "escapedText": "item2"
+          },
+          "initializer": {
+            "pos": 25,
+            "end": 27,
+            "flags": 0,
+            "kind": 8,
+            "text": "1",
+            "numericLiteralFlags": 0
+          }
+        }]
+      },
+      "modifierFlagsCache": 536870912
+    },
+    {
+      "pos": 28,
+      "end": 45,
+      "flags": 0,
+      "kind": 217,
+      "declarationList": {
+        "pos": 28,
+        "end": 44,
+        "flags": 2,
+        "kind": 236,
+        "declarations": [{
+          "pos": 34,
+          "end": 44,
+          "flags": 0,
+          "kind": 235,
+          "name": {
+            "pos": 34,
+            "end": 40,
+            "flags": 0,
+            "escapedText": "item3"
+          },
+          "initializer": {
+            "pos": 42,
+            "end": 44,
+            "flags": 0,
+            "kind": 8,
+            "text": "1",
+            "numericLiteralFlags": 0
+          }
+        }]
+      },
+      "modifierFlagsCache": 536870912
+    },
+    // if item === 1
+    {
+      "pos": 45,
+      "end": 174,
+      "flags": 0,
+      "kind": 220,
+      "expression": {
+        "pos": 51,
+        "end": 61,
+        "flags": 0,
+        "kind": 202,
+        "left": {
+          "pos": 51,
+          "end": 55,
+          "flags": 0,
+          "escapedText": "item"
+        },
+        "operatorToken": {
+          "pos": 55,
+          "end": 59,
+          "flags": 0,
+          "kind": 34
+        },
+        "right": {
+          "pos": 59,
+          "end": 61,
+          "flags": 0,
+          "kind": 8,
+          "text": "1",
+          "numericLiteralFlags": 0
+        }
+      },
+      // then item === 2
+      "thenStatement": {
+        "pos": 62,
+        "end": 78,
+        "flags": 0,
+        "kind": 216,
+        "multiLine": true,
+        "statements": [{
+          "pos": 64,
+          "end": 76,
+          "flags": 0,
+          "kind": 219,
+          "expression": {
+            "pos": 64,
+            "end": 75,
+            "flags": 0,
+            "kind": 202,
+            "left": {
+              "pos": 64,
+              "end": 71,
+              "flags": 0,
+              "escapedText": "item"
+            },
+            "operatorToken": {
+              "pos": 71,
+              "end": 73,
+              "flags": 0,
+              "kind": 58
+            },
+            "right": {
+              "pos": 73,
+              "end": 75,
+              "flags": 0,
+              "kind": 8,
+              "text": "2",
+              "numericLiteralFlags": 0
+            }
+          }
+        }]
+      },
+      "elseStatement": {
+        "pos": 83,
+        "end": 174,
+        "flags": 0,
+        "kind": 220,
+        // else if item === 2
+        "expression": {
+          "pos": 88,
+          "end": 98,
+          "flags": 0,
+          "kind": 202,
+          "left": {
+            "pos": 88,
+            "end": 92,
+            "flags": 0,
+            "escapedText": "item"
+          },
+          "operatorToken": {
+            "pos": 92,
+            "end": 96,
+            "flags": 0,
+            "kind": 34
+          },
+          "right": {
+            "pos": 96,
+            "end": 98,
+            "flags": 0,
+            "kind": 8,
+            "text": "2",
+            "numericLiteralFlags": 0
+          }
+        },
+        // then item === 2
+        "thenStatement": {
+          "pos": 99,
+          "end": 115,
+          "flags": 0,
+          "kind": 216,
+          "multiLine": true,
+          "statements": [{
+            "pos": 101,
+            "end": 113,
+            "flags": 0,
+            "kind": 219,
+            "expression": {
+              "pos": 101,
+              "end": 112,
+              "flags": 0,
+              "kind": 202,
+              "left": {
+                "pos": 101,
+                "end": 108,
+                "flags": 0,
+                "escapedText": "item"
+              },
+              "operatorToken": {
+                "pos": 108,
+                "end": 110,
+                "flags": 0,
+                "kind": 58
+              },
+              "right": {
+                "pos": 110,
+                "end": 112,
+                "flags": 0,
+                "kind": 8,
+                "text": "3",
+                "numericLiteralFlags": 0
+              }
+            }
+          }]
+        },
+        "elseStatement": {
+          "pos": 120,
+          "end": 174,
+          "flags": 0,
+          "kind": 220,
+          "expression": {
+            "pos": 125,
+            "end": 135,
+            "flags": 0,
+            "kind": 202,
+            "left": {
+              "pos": 125,
+              "end": 129,
+              "flags": 0,
+              "escapedText": "item"
+            },
+            "operatorToken": {
+              "pos": 129,
+              "end": 133,
+              "flags": 0,
+              "kind": 34
+            },
+            "right": {
+              "pos": 133,
+              "end": 135,
+              "flags": 0,
+              "kind": 8,
+              "text": "4",
+              "numericLiteralFlags": 0
+            }
+          },
+          "thenStatement": {
+            "pos": 136,
+            "end": 152,
+            "flags": 0,
+            "kind": 216,
+            "multiLine": true,
+            "statements": [{
+              "pos": 138,
+              "end": 150,
+              "flags": 0,
+              "kind": 219,
+              "expression": {
+                "pos": 138,
+                "end": 149,
+                "flags": 0,
+                "kind": 202,
+                "left": {
+                  "pos": 138,
+                  "end": 145,
+                  "flags": 0,
+                  "escapedText": "item"
+                },
+                "operatorToken": {
+                  "pos": 145,
+                  "end": 147,
+                  "flags": 0,
+                  "kind": 58
+                },
+                "right": {
+                  "pos": 147,
+                  "end": 149,
+                  "flags": 0,
+                  "kind": 8,
+                  "text": "4",
+                  "numericLiteralFlags": 0
+                }
+              }
+            }]
+          },
+          "elseStatement": {
+            "pos": 157,
+            "end": 174,
+            "flags": 0,
+            "kind": 216,
+            "multiLine": true,
+            "statements": [{
+              "pos": 159,
+              "end": 172,
+              "flags": 0,
+              "kind": 219,
+              "expression": {
+                "pos": 159,
+                "end": 171,
+                "flags": 0,
+                "kind": 202,
+                "left": {
+                  "pos": 159,
+                  "end": 166,
+                  "flags": 0,
+                  "escapedText": "item"
+                },
+                "operatorToken": {
+                  "pos": 166,
+                  "end": 168,
+                  "flags": 0,
+                  "kind": 58
+                },
+                "right": {
+                  "pos": 168,
+                  "end": 171,
+                  "flags": 0,
+                  "kind": 8,
+                  "text": "55",
+                  "numericLiteralFlags": 0
+                }
+              }
+            }]
+          }
+        }
+      },
+      "modifierFlagsCache": 536870912
+    }
+  ],
+  "endOfFileToken": {
+    "pos": 174,
+    "end": 175,
+    "flags": 0,
+    "kind": 1
+  },
+  "nodeCount": 56,
+  "identifierCount": 10,
+  "identifiers": {},
+  "parseDiagnostics": []
+}

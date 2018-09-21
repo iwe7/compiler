@@ -87,6 +87,12 @@ export function compiler(options?: CompilerOptions) {
                         "css-loader",
                         "sass-loader"
                     ]
+                },
+                {
+                    test: /\.(gif|jpeg)$/,
+                    use: [
+                        "file-loader"
+                    ]
                 }
             ]
         },
