@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="398px" preserveAspectRatio="none" style="width:149px;height:398px;" version="1.1" viewBox="0 0 149 398" width="149px" zoomAndPan="magnify"><defs><filter height="300%" id="f1i6ubi204oavk" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="57" x="45" y="27.4023">'demo'</text><polygon fill="#FEFECE" filter="url(#f1i6ubi204oavk)" points="23,31.1992,114,31.1992,124,62.3984,114,93.5977,23,93.5977" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="33" y="52.8008">开始</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="33" y="66.9336">if(条件) then</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="49" y="81.0664">-[#blue]-</text><rect fill="#FEFECE" filter="url(#f1i6ubi204oavk)" height="34.1328" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="42.5" y="113.5977"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="52.5" y="135.1992">执行1</text><polygon fill="#FEFECE" filter="url(#f1i6ubi204oavk)" points="20,189.0059,117,189.0059,127,220.2051,117,251.4043,20,251.4043" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="26" x="30" y="210.6074">foo3</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="23" x="30" y="224.7402">else</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="61" x="46" y="238.873">-[#black]-</text><polygon fill="#FEFECE" filter="url(#f1i6ubi204oavk)" points="31,271.4043,106,271.4043,116,302.6035,106,333.8027,31,333.8027" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="26" x="41" y="293.0059">foo4</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="29" x="41" y="307.1387">endif</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="41" y="321.2715">-[#gray]-</text><rect fill="#FEFECE" filter="url(#f1i6ubi204oavk)" height="34.1328" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="45.5" y="353.8027"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="26" x="55.5" y="375.4043">foo5</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="68.5" x2="68.5" y1="93.5977" y2="113.5977"/><polygon fill="#A80036" points="64.5,103.5977,68.5,113.5977,72.5,103.5977,68.5,107.5977" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #008000; stroke-width: 1.5;" x1="68.5" x2="68.5" y1="147.7305" y2="189.0059"/><polygon fill="#008000" points="64.5,179.0059,68.5,189.0059,72.5,179.0059,68.5,183.0059" style="stroke: #008000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="22" x="72.5" y="169.1855">说明</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="68.5" x2="68.5" y1="251.4043" y2="271.4043"/><polygon fill="#A80036" points="64.5,261.4043,68.5,271.4043,72.5,261.4043,68.5,265.4043" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="68.5" x2="68.5" y1="333.8027" y2="353.8027"/><polygon fill="#A80036" points="64.5,343.8027,68.5,353.8027,72.5,343.8027,68.5,347.8027" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+title 'demo'
+:开始
+if(条件) then
+    -[#blue]->
+    :执行1;
+    -[#green]->说明;
+    :foo3
+else
+    -[#black]->
+    :foo4
+endif
+-[#gray]->
+:foo5;
+@enduml
+
+PlantUML version 1.2018.03(Fri Apr 06 00:59:15 CST 2018)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 10.0.2+13
+Operating System: Mac OS X
+OS Version: 10.12.6
+Default Encoding: US-ASCII
+Language: zh
+Country: CN
+--></g></svg>

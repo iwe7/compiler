@@ -1,0 +1,41 @@
+.if-statement {
+    border-left-color: darkblue;
+    border-left-width: 5px;
+    border-left-style: solid;
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-then,
+        &-else {
+            padding-left: 30px;
+            border-top: 5px solid darkblue;
+            padding: 20px 0px 20px 30px;
+
+            .statement {
+                display: flex;
+                border: 2px solid darkblue;
+                margin-top: -40px;
+                margin-left: 50px;
+                background: #fff;
+                padding: 5px;
+            }
+        }
+    }
+
+    .expression {}
+
+
+
+    .elseStatement {
+        border-top-color: darkblue;
+        border-top-width: 5px;
+        border-top-style: solid;
+    }
+}

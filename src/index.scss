@@ -1,14 +1,17 @@
 html,
 body,
 #app {
-    height: 100vh;
     padding: 0px;
     margin: 0px;
+    cursor: default;
+}
 
-    svg {
-        height: 100vh;
-        width: 100vw;
-    }
+#app {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/grid.gif");
 }
 
 * {
